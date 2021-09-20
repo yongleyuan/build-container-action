@@ -10,4 +10,9 @@ inputs:
     description: 'List of tags that gets passed along to the docker build args'
     required: true
     default: '' # set to an empty string
-    
+
+runs:
+  using: "composite"
+  steps:
+  - uses: actions/checkout@v2
+  
