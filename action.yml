@@ -46,6 +46,7 @@ runs:
       cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
       
   - name: Cache Docker images
+    if: ${{ inputs.push }} = false
     uses: actions/cache@v2
     with:
       path: /tmp/.buildx-cache
