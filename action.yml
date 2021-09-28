@@ -10,6 +10,10 @@ inputs:
     description: 'List of tags that gets passed along to the docker build args'
     required: true
     default: '' # set to an empty string
+  push:
+    description: 'True if there is not test and caching step can be skipped, false otherwise'
+    required: true
+    default: false
 
 runs:
   using: "composite"
